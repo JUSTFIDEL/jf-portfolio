@@ -350,22 +350,22 @@ section {
 	transition: all 0.4s ease-in-out;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .html {
-	width: 80%;
+	width: 90%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .css {
-	width: 70%;
+	width: 80%;
 }
 .about-stats .progress-bars .progress-bar .progress-con .progress .js {
-	width: 65%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .react {
-	width: 45%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .bootstrap {
 	width: 70%;
 }
+.about-stats .progress-bars .progress-bar .progress-con .progress .react {
+	width: 75%;
+}
+.about-stats .progress-bars .progress-bar .progress-con .progress .bootstrap {
+	width: 80%;
+}
 .about-stats .progress-bars .progress-bar .progress-con .progress .jq {
-	width: 65%;
+	width: 75%;
 }
 
 .stat-title {
@@ -973,7 +973,7 @@ section {
 
 @media screen and (max-width: 600px) {
 	.section {
-		padding: 2.5rem 1.2rem !important;
+		padding: 2.5rem 1.8rem !important;
 		margin: 0 auto;
 	}
 
