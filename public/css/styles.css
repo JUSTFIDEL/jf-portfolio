@@ -111,7 +111,7 @@ section {
 	}
 }
 
-button {
+.button {
 	border-radius: 30px;
 	background-color: var(--color-primary);
 	color: inherit;
