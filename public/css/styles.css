@@ -475,7 +475,7 @@ section {
 }
 .portfolios .portfolio-item {
 	position: relative;
-	border-radius: 10px;
+	border-radius: 8px;
 }
 .portfolios .portfolio-item img {
 	width: 100%;
@@ -485,7 +485,7 @@ section {
 }
 .portfolios .portfolio-item .hover-items {
 	width: 100%;
-	height: 100%;
+	height: 97.5%;
 	background-color: var(--color-secondary);
 	position: absolute;
 	left: 0;
@@ -534,13 +534,13 @@ section {
 }
 
 .portfolio-item:hover .hover-items {
-	opacity: 0.8;
+	opacity: 0.7;
 	transform: scale(1);
 }
 
 .blogs {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
 	grid-gap: 2rem;
 	margin-top: 3rem;
 }
