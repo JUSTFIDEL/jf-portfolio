@@ -57,7 +57,19 @@ a {
 header {
 	min-height: 100vh;
 	color: var(--color-white);
-	overflow: hidden;
+	/* overflow: hidden; */
+	position: relative;
+}
+
+.trans-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-image: url(/images/thread.png);
+	/* background-repeat: repeat; */
+	opacity: 0.1;
 }
 
 section {
