@@ -711,7 +711,7 @@ section {
 }
 
 .copy-right {
-	font-size: 0.9rem;
+	font-size: 1rem;
 	margin-top: 1rem;
 	padding: 0.5rem;
 	position: absolute;
@@ -719,7 +719,7 @@ section {
 }
 
 .copy-right1 {
-	/* font-size: 0.9rem;
+	/* font-size: 1rem;
 	margin-top: 1rem;
 	padding: 0.5rem; */
 	display: none;
@@ -1164,7 +1164,7 @@ section {
 
 	.header-content .right-header p {
 		opacity: 1;
-		font-size: 0.9rem;
+		font-size: 1rem;
 		animation: loader1 1.3s ease-in;
 	}
 
@@ -1181,17 +1181,17 @@ section {
 
 	.about-container .left-about p {
 		opacity: 1;
-		font-size: 0.9rem;
+		font-size: 1rem;
 		animation: loader1 1.3s ease-in;
 	}
 
 	.contact-content-con {
-		font-size: 0.9rem;
+		font-size: 1rem;
 	}
 
 	.contact-content-con .left-contact p {
 		opacity: 1;
-		font-size: 0.9rem;
+		font-size: 1rem;
 		animation: loader1 1.3s ease-in;
 	}
 
@@ -1205,14 +1205,14 @@ section {
 	}
 
 	.copy-right {
-		/* font-size: 0.9rem;
+		/* font-size: 1rem;
 		margin-top: 1rem;
 		padding: 0.5rem; */
 		display: none;
 	}
 
 	.copy-right1 {
-		font-size: 0.9rem;
+		font-size: 1rem;
 		margin-top: 1rem;
 		display: block;
 		text-align: center;
@@ -1254,7 +1254,7 @@ section {
 	}
 
 	.lead {
-		font-size: 0.9rem;
+		font-size: 1rem;
 		font-weight: bold;
 		margin: 0.2rem 0 0.6rem 0;
 		color: var(--color-primary);
@@ -1268,7 +1268,7 @@ section {
 	}
 
 	.lead01 {
-		font-size: 0.9rem;
+		font-size: 1rem;
 		font-weight: bold;
 		margin: 0.2rem 0 0.6rem 0;
 		color: whitesmoke;
