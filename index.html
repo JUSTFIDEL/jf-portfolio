@@ -30,7 +30,7 @@
                 <h1 class="name">
                     <span>Fidelis Adang.<br/></span> 
                 </h1>
-                <h4>A Full-Stack Web Developer.</h4>
+                <h4>A <span id="element"></span></h4>
                 <p>
                     I'm a Full-Stack Web Developer and I love Creating Beautiful and Functional Websites.
                     I work with HTML5, CSS, SCSS, Tailwind-CSS, BootStrap, JavaScript, React JS and Node JS (MERN Stack).
@@ -606,6 +606,16 @@ A Well organised person, problem solver and a freelancer with high attention to 
 
 
     <script defer src="index.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        const typed = new Typed('#element', {
+          strings: ['FrontEnd Developer.', 'BackEnd Developer.', 'Full-Stack Web Developer.'],
+          typeSpeed: 100,
+          backSpeed: 100,
+          backDelay: 1000,
+          loop: true
+        });
+      </script>
 </body>
 </html>
 
