@@ -252,9 +252,9 @@ h4 {
 	letter-spacing: 3px;
 }
 
-span {
+span#element {
 	color: var(--color-secondary) !important;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 @keyframes loader {
