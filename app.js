@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const https = require('https')
 const app = express()
 // const nodemailer = require('nodemailer')
-const Mailgen = require('mailgen')
+// const Mailgen = require('mailgen')
 // const { EMAIL, PASSWORD } = require('./env.js')
 // const mailchimp = require('@mailchimp/mailchimp_marketing')
 
