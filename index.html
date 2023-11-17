@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="images/favicon.png">
     <title>JF-Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="css/styles.css">
     </head>
 
     
 <body class="main-content">
+    
     <div class="trans-bg"></div>
     <header class="section sec1 header active" id="home">
         <div class="trans-bg"></div>
@@ -592,18 +592,20 @@ A Well organised person, problem solver and a freelancer with high attention to 
 
                         
                     </div>
-
+                    
                     <div class="right-contact">
-                        <form id="my-form" action='/' class="contact-form" method="post"> 
+                        <!--  onsubmit="sendMail(); reset(); return false;"-->
+                        
+                        <form id="my-form" class="contact-form" action='mailto:fidenki1429@gmail.com' method="post"> 
                             <div class="input-control i-c-2">
-                                <input type="text" required placeholder="Your Name" name="name">
-                                <input type="email" required placeholder="Your Email" name="email">
+                                <input type="text" placeholder="Your Name" name="name" id="name" required>
+                                <input type="email" placeholder="Your Email" name="email" id="email" required>
                             </div>
                             <div class="input-control">
-                                <input type="text" required placeholder="Enter Subject" name="subject">
+                                <input type="text" placeholder="Enter Subject" name="subject" required id="subject">
                             </div>
                             <div class="input-control">
-                                <textarea name="message" required id="message" cols="15" rows="8" placeholder="Message here..."></textarea>
+                                <textarea name="message" id="message" cols="15" rows="8" placeholder="Message here..." required></textarea>
                             </div>
                             <div class="submit-btn">
                                 <input class="button" type="submit" name="submit">
@@ -646,15 +648,34 @@ A Well organised person, problem solver and a freelancer with high attention to 
 
     <script defer src="index.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
+
+     <script src="https://smtpjs.com/v3/smtp.js"></script>
+     <script>
         const typed = new Typed('#element', {
-          strings: ['FrontEnd Developer.', 'BackEnd Developer.', 'Full-Stack Web Developer.'],
+          strings: ['FrontEnd Dev.', 'BackEnd Dev.', 'FullStack Dev.'],
           typeSpeed: 100,
           backSpeed: 100,
           backDelay: 1000,
           loop: true
         });
-      </script>
+
+        // function sendMail() {
+        //     Email.send({
+        //         secureToken: "57e2999b-34bf-4257-8e4d-834300817563",
+        //         To : 'fidenki1429@gmail.com',
+        //         From : document.getElementById('email').value,
+        //         Subject : "New Contact From Portfolio",
+        //         Body : "Name: " + document.getElementById('name').value
+        //                 + "<br> Email: " + document.getElementById('email').value
+        //                 + "<br> Subject: " + document.getElementById('subject').value
+        //                 + "<br> Message: " + document.getElementById('message').value
+        //     }).then(
+        //         // message => alert("Message Sent Successfully")
+        //         message => generateToast()
+        //         );
+        // }
+    </script>
+
 </body>
 </html>
 
