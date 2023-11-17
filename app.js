@@ -3,6 +3,9 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const https = require('https')
 const app = express()
+const nodemailer = require('nodemailer')
+const Mailgen = require('mailgen')
+const { EMAIL, PASSWORD } = require('./env.js')
 // const mailchimp = require('@mailchimp/mailchimp_marketing')
 
 app.use(express.static('public'))
@@ -26,42 +29,43 @@ app.post('/', (req, res) => {
 	const subject = req.body.subject
 	const message = req.body.message
 
-	// const data = {
-	// 	members: [
-	// 		{
-	// 			email_address: email,
-	// 			status: 'subscribed',
-	// 			merge_fields: {
-	// 				FNAME: name,
-	// 			},
-	// 		},
-	// 	],
-	// }
+	// 	// const data = {
+	// 	// 	members: [
+	// 	// 		{
+	// 	// 			email_address: email,
+	// 	// 			status: 'subscribed',
+	// 	// 			merge_fields: {
+	// 	// 				FNAME: name,
+	// 	// 			},
+	// 	// 		},
+	// 	// 	],
+	// 	// }
 
-	// const jsonData = JSON.stringify(data)
+	// 	// const jsonData = JSON.stringify(data)
 
-	// const url = 'https://us17.api.mailchimp.com/3.0/lists/' + process.env.SERVER
+	// 	// const url = 'https://us17.api.mailchimp.com/3.0/lists/' + process.env.SERVER
 
-	// const options = {
-	// 	method: 'POST',
-	// 	auth: 'justfidel:' + process.env.API_KEY,
-	// }
+	// 	// const options = {
+	// 	// 	method: 'POST',
+	// 	// 	auth: 'justfidel:' + process.env.API_KEY,
+	// 	// }
 
-	// const request = https.request(url, options, response => {
-	// 	if (response.statusCode === 200) {
-	// 		res.sendFile(__dirname + '/success.html')
-	// 	} else {
-	// 		res.sendFile(__dirname + '/failure.html')
-	// 	}
+	// 	// const request = https.request(url, options, response => {
+	// 	// 	if (response.statusCode === 200) {
+	// 	// 		res.sendFile(__dirname + '/success.html')
+	// 	// 	} else {
+	// 	// 		res.sendFile(__dirname + '/failure.html')
+	// 	// 	}
 
-	// 	response.on('data', data => {
-	// 		console.log(JSON.parse(data))
-	// 	})
-	// })
+	// 	// 	response.on('data', data => {
+	// 	// 		console.log(JSON.parse(data))
+	// 	// 	})
+	// 	// })
 
-	// request.write(jsonData)
-	// request.end()
+	// 	// request.write(jsonData)
+	// 	// request.end()
 
+	// 	/////////////////////////////////
 	if (res.statusCode === 200) {
 		res.sendFile(__dirname + '/success.html')
 		// res.redirect('/')
@@ -70,6 +74,63 @@ app.post('/', (req, res) => {
 		res.redirect('/')
 	}
 })
+
+// app.post('/api/send', (req, res) => {
+// 	const { userEmail } = req.body
+
+// 	const config = {
+// 		service: 'gmail',
+// 		auth: {
+// 			user: EMAIL,
+// 			pass: PASSWORD,
+// 		},
+// 	}
+
+// 	const transporter = nodemailer.createTransport(config)
+
+// 	const MailGenerator = new Mailgen({
+// 		theme: 'default',
+// 		product: {
+// 			name: 'Mailgen',
+// 			link: 'https://mailgen.js',
+// 		},
+// 	})
+
+// 	const response = {
+// 		body: {
+// 			name: 'JustFidel 2023',
+// 			intro: 'Your bill is here',
+// 			table: {
+// 				data: [
+// 					{
+// 						item: 'Nodemailer Stack',
+// 						description: 'Backend App',
+// 						price: 'N1000',
+// 					},
+// 				],
+// 			},
+// 			outro: 'Looking forward to do business',
+// 		},
+// 	}
+
+// 	let mail = MailGenerator.generate(response)
+
+// 	let message = {
+// 		from: EMAIL,
+// 		to: userEmail,
+// 		subject: 'Place Order',
+// 		html: mail,
+// 	}
+
+// 	transporter
+// 		.sendMail(message)
+// 		.then(() => {
+// 			return res.status(201).json({ msg: 'You should recieve a message' })
+// 		})
+// 		.catch(err => {
+// 			return res.status(500).json({ err })
+// 		})
+// })
 
 app.post('/success', (req, res) => {
 	res.redirect('/')
