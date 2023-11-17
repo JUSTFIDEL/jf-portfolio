@@ -17,7 +17,6 @@ function pageTransition() {
 			this.className += ' active-btn'
 		})
 	}
-
 	//Section Active
 	allSections.addEventListener('click', e => {
 		const id = e.target.dataset.id
@@ -48,3 +47,30 @@ function pageTransition() {
 }
 
 pageTransition()
+
+// let toastContainer
+
+// function generateToast({
+// 	message = 'Message sent successfully',
+// 	background = '#00214d',
+// 	color = '#fffffe',
+// 	length = '3000ms',
+// }) {
+// 	toastContainer.insertAdjacentHTML(
+// 		'beforeend',
+// 		`<p class='toast' style='background-color: ${background}; color: ${color}; animation-duration: ${length}'>${message}</p>`,
+// 	)
+
+// 	const toast = toastContainer.lastElementChild
+// 	toast.addEventListener('animationend', () => toast.remove())
+// }
+
+// function initToast() {
+// 	document.body.insertAdjacentHTML(
+// 		'afterbegin',
+// 		`<div class="toast-container"></div>`,
+// 	)
+// 	toastContainer = document.querySelector('toast-container')
+// }
+
+// initToast()
