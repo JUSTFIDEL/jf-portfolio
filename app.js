@@ -90,13 +90,13 @@ app.post(
 	// }
 )
 
-app.get('/success', (req, res) => {
-	res.sendFile(__dirname + '/success.html')
-})
+// app.get('/success', (req, res) => {
+//	res.sendFile(__dirname + '/success.html')
+// })
 
-app.get('/failure', (req, res) => {
-	res.sendFile(__dirname + '/failure.html')
-})
+// app.get('/failure', (req, res) => {
+// 	res.sendFile(__dirname + '/failure.html')
+// })
 
 // app.post('/api/send', (req, res) => {
 // 	const { userEmail } = req.body
